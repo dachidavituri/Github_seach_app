@@ -23,6 +23,7 @@ const link = document.querySelector(".link");
 const socialMedia = document.querySelector(".twitter");
 const company = document.querySelector(".company");
 const errorResult = document.querySelector('.error')
+const errorResultExtra = document.querySelector('.error-extra')
 
 const octobat = {
   login: "octocat",
@@ -60,6 +61,7 @@ const octobat = {
 };
 user.addEventListener('input', function(){
     errorResult.textContent = ''
+    errorResultExtra.textContent = ''
 })
 const changeThemeDark = (color) => {
   if (color === "dark") {
@@ -179,7 +181,8 @@ searchBtn.addEventListener("click", async (event) => {
     console.log(user);
   } catch (error) {
     console.log(error);
-    errorResult.textContent = 'No result'
+    errorResult.textContent = 'No results'
+    errorResultExtra.textContent = 'No results'
   }
 });
 
